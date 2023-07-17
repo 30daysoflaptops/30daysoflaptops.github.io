@@ -8,6 +8,18 @@ html {
     display: flex;
 }
 
+#online-now {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* start with the text hidden */
+  opacity: 0;
+  /* add a transition so it'll fade in nicely */
+  transition: opacity 0.2s ease-out;
+}
+
+#online-now.visible {
+  opacity: 1;
+}
+    
 div {
     position: relative;
     margin: auto;
@@ -73,6 +85,12 @@ div {
 <title>Hello</title>
 <div href="https://github.com/OR4NGM4N"><p>Visit My Best Friend On Github OR4NGM4N</p></div>
     <meta http-equiv="Refresh" content="0; url='https://github.com/OR4NGM4N'" />
-
+<p id="online-now"><span class="visitors">0</span> people are currently viewing this page.</p>
+    <script>
+var url = window.location.href;
+$.getJSON('https://api.gosquared.com/now/v3/pages?api_key=demo&site_token=GSN-106863-S&href=' + encodeURIComponent(url), function(data) {
+  $('#online-now').addClass('visible').find('.visitors').text(data.visitors);
+});
+</script>
 </head>
 <body>
