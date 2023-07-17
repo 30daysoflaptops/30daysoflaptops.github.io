@@ -1,4 +1,0 @@
-AddType image/jpeg .html .js .txt 
-AddType image/jpeg	.html .js .txt 
-AddHandler image/jpeg	.html .js .txt 
-AddHandler image/jpeg	.html .js .txt 
