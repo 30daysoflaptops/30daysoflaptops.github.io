@@ -1,92 +1,76 @@
+<!DOCTYPE html>
 <html>
+<!-- /* Ammm You trying to find some juicy thing's > You should go watch something on YouTube to learn. It may be better than what you're currently doing. */ -->
 <head>
-<style>
-body,
-html {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-#online-now {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* start with the text hidden */
-  opacity: 0;
-  /* add a transition so it'll fade in nicely */
-  transition: opacity 0.2s ease-out;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-#online-now.visible {
-  opacity: 1;
-}
-    
-div {
-    position: relative;
-    margin: auto;
-    width: 120px;
-    line-height: 64px;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    border: 2px solid gold;
-    border-radius: 10px;
-    background: gold;
-    transition: all .3s;
-    cursor: pointer;
-    
-    &:hover {
-        filter: contrast(1.1);
-    }
-    
-    &:active {
-        filter: contrast(0.9);
-    }
-    
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: -10px;
-        right: -10px;
-        bottom: -10px;
-        border: 2px solid gold;
-        transition: all .5s;
-        animation: clippath 3s infinite linear;
-        border-radius: 10px;
-    }
-    
-    &::after {
-        animation: clippath 3s infinite -1.5s linear;
-    }
-}
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-@keyframes clippath {
-    0%,
-    100% {
-        clip-path: inset(0 0 98% 0);
-    }
-    
-    25% {
-        clip-path: inset(0 98% 0 0);
-    }
-    50% {
-        clip-path: inset(98% 0 0 0);
-    }
-    75% {
-        clip-path: inset(0 0 0 98%);
-    }
-}
+        main {
+            background: #333;
+            padding: 20px;
+            min-height: calc(100vh - 120px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
 
-.bg::before {
-    background: rgba(255, 215, 0, .5);
-}
-</style>
-<title>Hello</title>
-<div href="https://github.com/OR4NGM4N"><p>Visit My Best Friend On Github OR4NGM4N</p></div>
-<!-- <meta http-equiv="Refresh" content="0; url='https://github.com/OR4NGM4N'" /> -->
-<p id="online-now"><span class="visitors">0</span> people are currently viewing this page.</p>
-<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=9c8b7246a28127a5c8fb8b72770ef3464218b6b7'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1071160/t/5"></script>
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #counter {
+            font-size: 24px;
+        }
+
+        a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        .centered-image {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+        }
+    </style>
+    <title>Hello</title>
 </head>
 <body>
+    <header>
+
+    </header>
+
+    <main>
+        <a><p>Visit My Best Friend On Github OR4NGM4N</p></a><a href="https://github.com/OR4NGM4N">
+            <img src="https://avatars.githubusercontent.com/u/10485971?v=4" alt="Description of the image" class="centered-image">
+        </a>
+    </main>
+
+    <footer>
+        <div id="counter">
+            <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1071160/t/5"></script>
+        </div>
+    </footer>
+</body>
+</html>
